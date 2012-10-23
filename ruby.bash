@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -x "$(/usr/bin/which -s rbenv)" ]]; then
+if [ -x "$(/usr/bin/which -s rbenv)" ]; then
     echo "rbenv is not installed"
     exit 1
 fi

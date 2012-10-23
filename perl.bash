@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function notify() {
-  if [[ -x "$(/usr/bin/which -s growlnotify)" ]]; then
-    growlnotify -m "$1"
-  fi
+    if [[ -x "$(/usr/bin/which -s growlnotify)" ]]; then
+        growlnotify -m "$1"
+    fi
 
-  echo "$1"
+    echo "$1"
 }
 
 export PERLBREW_ROOT=$HOME/.perlbrew
@@ -24,10 +24,10 @@ notify "Switch to $__PERL_VERSION"
 perlbrew switch $__PERL_VERSION
 
 notify "Install CPAN modules"
-cpanm --notest    \
-  Project::Libs   \
-  Module::Install \
-  Vi::QuickFix    \
-  Test::Pretty    \
-  App::pmuninstall \
-  App::REPL
+cpanm --notest       \
+    Project::Libs    \
+    Module::Install  \
+    Vi::QuickFix     \
+    Test::Pretty     \
+    App::pmuninstall \
+    App::REPL
