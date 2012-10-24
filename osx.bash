@@ -50,6 +50,9 @@ defaults write com.reederapp.mac ServicePinboardDisabled -bool true
 defaults write com.reederapp.mac ServiceReadabilityDisabled -bool true
 defaults write com.reederapp.mac ServiceZootoolDisabled -bool true
 
+# Enable locate command
+launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
 killall Finder >> /dev/null
 killall Dock >> /dev/null
 killall SystemUIServer >> /dev/null

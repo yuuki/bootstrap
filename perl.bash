@@ -30,4 +30,5 @@ cpanm --notest       \
     Vi::QuickFix     \
     Test::Pretty     \
     App::pmuninstall \
-    App::REPL
+    Carp::REPL       \
+    Devel::REPL
