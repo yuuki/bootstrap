@@ -5,8 +5,8 @@ if [ -x "$(/usr/bin/which -s rbenv)" ]; then
     exit 1
 fi
 
-export CONFIGURE_OPTS=--enable-shared
-current_ruby_version="1.9.3-p194"
+export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
+current_ruby_version="1.9.3-p286"
 
 echo "Setup rbenv"
 eval "$(rbenv init -)"

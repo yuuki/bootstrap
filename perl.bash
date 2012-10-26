@@ -9,9 +9,10 @@ function notify() {
 }
 
 export PERLBREW_ROOT=$HOME/.perlbrew
-__PERL_VERSION='perl-5.14.2'
+__PERL_VERSION='perl-5.14.3'
 notify "Install perlbrew"
 curl -kL http://install.perlbrew.pl | bash
+source $HOME/.perlbrew/etc/bashrc
 
 notify "Install $__PERL_VERSION"
 perlbrew install $__PERL_VERSION

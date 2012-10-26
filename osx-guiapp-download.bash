@@ -30,16 +30,13 @@ echo "TexShop"
 wget_unzip texshop.zip http://pages.uoregon.edu/koch/texshop/texshop-64/texshop.zip
 echo "RightZoom"
 wget_unzip RightZoop.zip http://www.macupdate.com/download/30591/RightZoom.zip
-echo "Yorufukuro"
-wget_unzip YoruFukuro.zip http://aki-null.net/yf/YoruFukurou_SL.zip
 echo "Kobito"
 wget_unzip Kobito.zip http://kobitoapp.com/download/Kobito_v1.1.zip
 echo "MacTeX"
 wget_unzip MacTex.mpkg http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip
+wget_unzip iTerm2.zip http://iterm2.googlecode.com/files/iTerm2-1_0_0_20120726.zip
 
 # dmg
-echo "Dropbox"
-wgetq Dropbox.dmg https://www.dropbox.com/downloading?os=mac
 echo "Github"
 wgetq Github.dmg https://central.github.com/mac/latest
 echo "UpTex"
@@ -47,7 +44,7 @@ wgetq UTeX20111010.dmg http://www2.kumagaku.ac.jp/teacher/herogw/archive/UTeX201
 echo "TotalTerminal"
 wgetq TotalTerminal.dmg http://downloads.binaryage.com/TotalTerminal-1.3.dmg
 echo "Spark"
-wgetq Spark.dmg http://www.macupdate.com/download/14352/Spark.dmg
+wgetq Spark.dmg http://www.shadowlab.org/softwares/Spark/Spark.dmg
 echo "SequelPro"
 wgetq SequelPro.dmg http://sequel-pro.googlecode.com/files/Sequel_Pro_0.9.9.1.dmg
 echo "KeyRemap4MacBook"
@@ -65,9 +62,10 @@ echo "Done install GUI App"
 
 
 echo "Additionally, more necessory app are here."
-echo "Growl http://click.linksynergy.com/fs-bin/stat?id=p2jXy8FHIGg&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fgrowl%252Fid467939042%253Fmt%253D12%2526uo%253D4%2526partnerId%253D30"
-echo "Mermory Scope https://itunes.apple.com/jp/app/memory-scope/id470372671?mt=12"
-echo "GeekTool https://itunes.apple.com/jp/app/geektool/id456877552?mt=12"
-echo "Chrome http://www.google.com/chrome/eula.html?hl=ja"
+echo "Growl"
+echo "Mermory Scope"
+echo "GeekTool"
+echo "Chrome"
+echo "Dropbox"
 echo "OSX Command Line Tools https://developer.apple.com/downloads/index.action#"
 
