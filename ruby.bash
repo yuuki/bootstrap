@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ -x "$(/usr/bin/which -s rbenv)" ]; then
-    echo "rbenv is not installed"
-    exit 1
+if [[ ! "$(type rbenv > /dev/null 2>&1)" ]]; then
+    echo "Install rbenv ..."
+    git clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
 fi
 
 export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
@@ -19,5 +19,5 @@ rbenv global $current_ruby_version
 
 gem update --system
 gem update
-gem install bundler pry pry-doc powder reek roodi flog flay
+gem install bundler pry pry-doc powder reek roodi flog flay tmuxinator
 rbenv rehash
