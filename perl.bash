@@ -31,6 +31,7 @@ echo "Install CPAN modules ..."
 cpanm --notest       \
     Project::Libs    \
     Module::Install  \
+    Module::Install::AuthorTests \
     Vi::QuickFix     \
     Test::Pretty     \
     App::pmuninstall \
