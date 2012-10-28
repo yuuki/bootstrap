@@ -18,7 +18,35 @@ fi
 
 echo "Homebrew package install ..."
 
-/usr/local/bin/brew install wget git zsh openssl readline tig tmux rbenv rbenv-gemset ruby-build curl coreutils boost git-flow gnu-sed shared-mime-info sqlite byobu calc ctags keychain nkf mercurial autojump rename renameutils
+/usr/local/bin/brew install \
+    wget                \
+    git                 \
+    zsh                 \
+    openssl             \
+    readline            \
+    tig                 \
+    tmux                \
+    rbenv               \
+    rbenv-gemset        \
+    ruby-build          \
+    curl                \
+    coreutils           \
+    boost               \
+    git-flow            \
+    git-now             \
+    gnu-sed             \
+    gnu-tar             \
+    shared-mime-info    \
+    sqlite              \
+    byobu               \
+    calc                \
+    ctags               \
+    keychain            \
+    nkf                 \
+    mercurial           \
+    autojump            \
+    rename              \
+    renameutils
 
 /usr/local/bin/brew list | xargs brew link
 

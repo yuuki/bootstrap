@@ -40,6 +40,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Disable Safari cache image
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
+# Change Screen Shot save location
+[[ -d $HOME/Pictures/ScreenShots ]] || mkdir -p $HOME/Pictures/ScreenShots
+defaults write com.apple.screencapture location $HOME/Pictures/ScreenShots
+
 # Disable unnecessory deamons
 defaults write com.reederapp.mac ServiceAlternateBrowserDisabled -bool true
 defaults write com.reederapp.mac ServiceBlogDisabled -bool true
@@ -54,7 +58,7 @@ defaults write com.reederapp.mac ServiceReadabilityDisabled -bool true
 defaults write com.reederapp.mac ServiceZootoolDisabled -bool true
 
 # Enable locate command
-launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 killall Finder >> /dev/null
 killall Dock >> /dev/null
