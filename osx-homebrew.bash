@@ -36,6 +36,8 @@ echo "Homebrew package install ..."
     git-now             \
     gnu-sed             \
     gnu-tar             \
+    gnu-time            \
+    gnu-which           \
     shared-mime-info    \
     sqlite              \
     byobu               \
