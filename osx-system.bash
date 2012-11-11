@@ -60,6 +60,9 @@ defaults write com.reederapp.mac ServiceZootoolDisabled -bool true
 # Enable locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
+# Disable local backup
+sudo tmutil disablelocal
+
 killall Finder >> /dev/null
 killall Dock >> /dev/null
 killall SystemUIServer >> /dev/null
