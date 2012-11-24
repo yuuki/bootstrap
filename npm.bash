@@ -2,15 +2,16 @@
 
 echo "Setup npm"
 
-if [[ -x "(/usr/bin/which -s node)" ]]; then
+if ! type node > /dev/null 2>&1; then
     echo "Install nodejs ..."
     brew install nodejs
+    hash -r
 fi
 
-if [[ -x "$(/usr/bin/which -s npm)" ]]; then
-    echo "Install npm ..."
-    curl https://npmjs.org/install.sh | sh
-fi
+# if ! type npm > /dev/null 2>&1; then
+#     echo "Install npm ..."
+#     curl https://npmjs.org/install.sh | sh
+# fi
 
 echo "Update npm ..."
 npm -g update
