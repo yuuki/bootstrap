@@ -43,6 +43,7 @@ echo "Homebrew package install ..."
     byobu               \
     calc                \
     ctags               \
+    global              \
     keychain            \
     nkf                 \
     mercurial           \

@@ -36,4 +36,5 @@ cpanm --notest       \
     Test::Pretty     \
     App::pmuninstall \
     Carp::REPL       \
-    Devel::REPL
+    Devel::REPL      \
+    App::Ack
