@@ -21,3 +21,9 @@ npm -g install coffee-script
 
 echo "Install jshint ..."
 npm -g install jshint
+
+echo "Install node.dev ..."
+npm -g install node-dev
+
+echo "Install less ..."
+npm -g install less
