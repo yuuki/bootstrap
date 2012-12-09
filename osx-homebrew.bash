@@ -49,7 +49,9 @@ echo "Homebrew package install ..."
     mercurial           \
     autojump            \
     rename              \
-    renameutils
+    renameutils         \
+    htop-osx            \
+    pstree
 
 /usr/local/bin/brew list | xargs brew link
 
