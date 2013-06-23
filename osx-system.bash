@@ -10,7 +10,7 @@ defaults -currentHost write -g AppleFontSmoothing -int 3
 # Disable warning when changing extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
 # Display hidden files
-defaults write com.apple.finder AppleShowAllFiles true
+defaults write com.apple.finder AppleShowAllFiles false
 # Display always extention
 defaults write -g AppleShowAllExtensions -bool true
 
