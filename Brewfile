@@ -33,6 +33,10 @@ brew 'parallel'
 brew 'pssh'
 brew 'xz'
 brew 'zlib'
+brew 'plenv'
+brew 'perl-build'
+brew 'rbenv'
+brew 'ruby-build'
 
 # MacVim kaoriya
 tap 'supermomonga/homebrew-splhack'

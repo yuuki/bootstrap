@@ -1,18 +1,11 @@
 #!/bin/bash
 
-if [[ ! "$(type rbenv > /dev/null 2>&1)" ]]; then
-    echo "Install rbenv ..."
-    git clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
-fi
-
 PATH="$HOME/.rbenv/bin:$PATH"
 # export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
 current_ruby_version="2.0.0-p353"
 
 echo "Setup rbenv"
 eval "$(rbenv init -)"
-
-exec $SHELL -l
 
 echo "Install $current_ruby_version"
 rbenv install $current_ruby_version

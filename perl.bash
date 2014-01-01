@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [[ ! "$(type plenv > /dev/null 2>&1)" ]]; then
-    echo "Install plenv ..."
-    git clone git://github.com/tokuhirom/plenv.git $HOME/.plenv
-fi
 
 PATH="$HOME/.plenv/bin:$PATH"
 # export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
