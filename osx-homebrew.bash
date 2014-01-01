@@ -14,58 +14,10 @@ if [[ -x $(/usr/bin/which -s brew) ]]; then
     ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 fi
 
-/usr/local/bin/brew update
+BREW="/usr/local/bin/brew"
 
-echo "Homebrew package install ..."
+$BREW update
+brewdle install
+$BREW linkapps
 
-/usr/local/bin/brew install \
-    wget                \
-    git                 \
-    zsh                 \
-    openssl             \
-    readline            \
-    tig                 \
-    tmux                \
-    rbenv               \
-    rbenv-gemset        \
-    ruby-build          \
-    curl                \
-    coreutils           \
-    boost               \
-    git-flow            \
-    git-now             \
-    gnu-sed             \
-    gnu-tar             \
-    gnu-time            \
-    gnu-which           \
-    shared-mime-info    \
-    sqlite              \
-    byobu               \
-    calc                \
-    ctags               \
-    global              \
-    keychain            \
-    nkf                 \
-    mercurial           \
-    autojump            \
-    rename              \
-    renameutils         \
-    htop-osx            \
-    pstree
-
-/usr/local/bin/brew list | xargs brew link
-
-echo "MacVim Kaoriya install ..."
-/usr/local/bin/brew install --HEAD https://raw.github.com/splhack/homebrew-splhack/master/Library/Formula/cmigemo.rb
-/usr/local/bin/brew install --HEAD https://raw.github.com/splhack/homebrew-splhack/master/Library/Formula/ctags-objc-ja.rb
-brew link --overwrite cmigemo ctags-objc-ja.rb
-/usr/local/bin/brew install --HEAD https://raw.github.com/splhack/homebrew-splhack/master/Library/Formula/macvim-kaoriya.rb
-ln -s /usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app /Applications/
-mkdir $HOME/bin
-ln -s /usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app/Contents/MacOS/mvim $HOME/bin/mvim
-
-/usr/local/bin/brew install mysql
-#unset TMPDIR
-#mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-
-echo "Done Homebrew package install"
+echo "Done Homebrew Setup"

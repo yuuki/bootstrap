@@ -5,8 +5,8 @@ if [[ ! "$(type rbenv > /dev/null 2>&1)" ]]; then
     git clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
 fi
 
-export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
-current_ruby_version="1.9.3-p286"
+# export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
+current_ruby_version="2.0.0-p353"
 
 echo "Setup rbenv"
 eval "$(rbenv init -)"
@@ -19,5 +19,5 @@ rbenv global $current_ruby_version
 
 gem update --system
 gem update
-gem install bundler pry pry-doc pry-coolline powder reek roodi flog flay tmuxinator
+gem install --no-ri --no-rdoc  bundler pry pry-doc pry-coolline powder reek roodi flog flay tmuxinator hub brewdler
 rbenv rehash
