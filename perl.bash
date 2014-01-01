@@ -5,11 +5,13 @@ if [[ ! "$(type plenv > /dev/null 2>&1)" ]]; then
     git clone git://github.com/tokuhirom/plenv.git $HOME/.plenv
 fi
 
+PATH="$HOME/.plenv/bin:$PATH"
 # export CONFIGURE_OPTS="--enable-shared --with-openssl-dir=/usr/local --with-readline-dir=/usr/local"
 current_perl_version="5.18.1"
 
 echo "Setup plenv"
 eval "$(plenv init -)"
+exec $SHELL -l
 
 echo "Install $current_perl_version"
 plenv install $current_perl_version
