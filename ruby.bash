@@ -19,5 +19,5 @@ rbenv global $current_ruby_version
 
 gem update --system
 gem update
-gem install --no-ri --no-rdoc  bundler pry pry-doc pry-coolline powder reek roodi flog flay tmuxinator hub brewdler
+gem install --no-ri --no-rdoc  bundler pry pry-doc pry-coolline powder reek roodi flog flay tmuxinator hub brewdler rbenv-rehash rbenv-bundler
 rbenv rehash
