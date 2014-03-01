@@ -1,62 +1,78 @@
-brew 'wget'
-brew 'curl'
-brew 'git'
-brew 'zsh'
-brew 'openssl'
-brew 'readline'
-brew 'tig'
-brew 'tmux'
-brew 'coreutils'
-brew 'osxutils'
-brew 'glib'
-brew 'tmux'
-brew 'shared-mime-info'
-brew 'sqlite'
-brew 'calc'
-brew 'ctags'
-brew 'global'
-brew 'keychain'
-brew 'nkf'
-brew 'htop-osx'
-brew 'pstree'
-brew 'git-flow'
-brew 'gnu-sed'
-brew 'gnu-tar'
-brew 'gnu-time'
-brew 'gnu-which'
-brew 'rename'
-brew 'renameutils'
-brew 'ack'
-brew 'autossh'
-brew 'proxychains-ng'
-brew 'parallel'
-brew 'pssh'
-brew 'xz'
-brew 'zlib'
-brew 'plenv'
-brew 'perl-build'
-brew 'rbenv'
-brew 'ruby-build'
+# Taps {{{
+  tap phinze/cask || true
+  tap caskroom/versions || true
+  tap supermomonga/homeinstall-splhack
+# }}}
+
+update
+
+install wget
+install curl
+install git  --with-pcre --with-installed-openssl
+install reattach-to-user-namespace --HEAD --wrap-launchctl --wrap-pbcopy-and-pbpaste
+install zsh
+install openssl
+install readline
+install tig
+install tmux
+install coreutils
+install osxutils
+install glib
+install tmux
+install shared-mime-info
+install sqlite
+install calc
+install ctags
+install global
+install keychain
+install nkf
+install htop-osx
+install pstree
+install git-flow
+install gnu-sed
+install gnu-tar
+install gnu-time
+install gnu-which
+install rename
+install renameutils
+install hub
+install ack
+install autossh
+install proxychains-ng
+install parallel
+install pssh
+install xz
+install zlib
+install plenv
+install perl-build
+install rbenv
+install ruby-build
+install go
+install openssl
+install readline
 
 # MacVim kaoriya
-tap 'supermomonga/homebrew-splhack'
-brew 'cmigemo-mk'
-brew 'ctags-objc-ja'
-brew 'gettext-mk'
-brew 'macvim-kaoriya'
+install cmigemo-mk
+install ctags-objc-ja
+install gettext-mk
+install macvim-kaoriya
 
-tap 'phinze/cask'
-cask 'google-chrome'
-cask 'dropbox'
-cask 'skype'
-cask 'limechat'
-cask 'virtualbox'
-cask 'mysql-workbench'
-cask 'yorufukurou'
-cask 'iterm2'
-cask 'alfred'
-cask 'keyremap4macbook'
-cask 'pckeyboardhack'
-cask 'sparrow'
-cask 'kobito'
-cask 'vagrant'
+install install-cask
+
+cask install google-chrome
+cask install firefox
+cask install dropbox
+cask install skype
+cask install limechat
+cask install virtualbox
+cask install mysql-workbench
+cask install yorufukurou
+cask install iterm2-beta
+cask install alfred
+cask install keyremap4macbook
+cask install pckeyboardhack
+cask install sparrow
+cask install kobito
+cask install vagrant
+
+# vim:set foldmaker=marker:
